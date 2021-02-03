@@ -15,8 +15,31 @@ $(document).ready(function () {
 
     var start = $("#search")
     var name =$("#city1")
-    
-    
+    var temperature = $("#temp")
+    var humidity = $("#hum")
+    var wind = $("#wind")
+    var uv = $("#uv")
+    var day1 =$("#day1")
+    var day2 =$("#day2")
+    var day3 =$("#day3")
+    var day4 =$("#day4")
+    var day5 =$("#day5")
+    var tem1 =$("#tem1")
+    var tem2 =$("#tem2")
+    var tem3 =$("#tem3")
+    var tem4 =$("#tem4")
+    var tem5 =$("#tem5")
+    var hum1 =$("#hum1")
+    var hum2 =$("#hum2")
+    var hum3 =$("#hum3")
+    var hum4 =$("#hum4")
+    var hum5 =$("#hum5")
+
+
+
+
+
+
     start.on("click", function (e) {
         e.preventDefault();
 
@@ -28,7 +51,29 @@ $(document).ready(function () {
            method: "GET"
         }).then(function(data){
             console.log(data)
-            name.text(data.name)
+            name.text("city name : " + data.city.name)
+            temperature.text("temperature : " + data.list[0].main.temp)
+            humidity.text("humidity : " + data.list[0].main.humidity)
+            wind.text("wind : " + data.list[0].wind.speed)
+            
+            day1.text("day : " + data.list[8].dt_txt)
+            day2.text("day : " + data.list[16].dt_txt)
+            day3.text("day : " + data.list[24].dt_txt)
+            day4.text("day : " + data.list[32].dt_txt)
+            day5.text("day : " + data.list[39].dt_txt)
+             
+            tem1.text("tempurature : " + data.list[8].main.temp)
+            tem2.text("tempurature  : " + data.list[16].main.temp)
+            tem3.text("tempurature  : " + data.list[24].main.temp)
+            tem4.text("tempurature  : " + data.list[32].main.temp)
+            tem5.text("tempurature  : " + data.list[39].main.temp)
+             
+            hum1.text("humidity : " + data.list[8].main.humidity)
+            hum2.text("humidity : " + data.list[16].main.humidity)
+            hum3.text("humidity : " + data.list[24].main.humidity)
+            hum4.text("humidity : " + data.list[32].main.humidity)
+            hum5.text("humidity : " + data.list[39].main.humidity)
+
         })
     })
 
