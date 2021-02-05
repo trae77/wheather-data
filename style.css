@@ -4,6 +4,9 @@ font-size: xx-large;background-color: black; }
 div{
     padding-top: 10px;
     padding-bottom: 10px;
+  
 }
-
+#floatright{
+display: inline-block;
+}
 
