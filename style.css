@@ -9,4 +9,6 @@ div{
 #floatright{
 display: inline-block;
 }
-
+.btn-group-vertical{
+    border: 2px solid black;
+}
