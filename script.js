@@ -81,12 +81,12 @@ $(document).ready(function () {
 
   }
 
-  function cityWheather(city) {
+  function cityWheather(city2) {
     console.log("connected");
     console.log(city);
 
 
-    url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=50735cce711c764de2fa4f86ca9affae"
+    url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city2 + "&units=imperial&appid=50735cce711c764de2fa4f86ca9affae"
     $.ajax({
       url: url,
       method: "GET"
@@ -137,32 +137,32 @@ $(document).ready(function () {
 
   search1.click(function () {
     //click works
-    city = localStorage.getItem(localStorage.key(1));
-    cityWheather(city);
+    city2 = localStorage.getItem(localStorage.key(1));
+    cityWheather(city2);
   });
 
   search2.click(function () {
     //click works
-    city = localStorage.getItem(localStorage.key(2));
-    cityWheather(city);
+    city2 = localStorage.getItem(localStorage.key(2));
+    cityWheather(city2);
   });
 
   search3.click(function () {
     //click works
-    city = localStorage.getItem(localStorage.key(3));
-    cityWheather(city);
+    city2 = localStorage.getItem(localStorage.key(3));
+    cityWheather(city2);
   });
 
   search4.click(function () {
     //click works
-    city = localStorage.getItem(localStorage.key(4));
-    cityWheather(city);
+    city2 = localStorage.getItem(localStorage.key(4));
+    cityWheather(city2);
   });
 
   search5.click(function () {
     //click works
-    city = localStorage.getItem(localStorage.key(5));
-    cityWheather(city);
+    city2 = localStorage.getItem(localStorage.key(5));
+    cityWheather(city2);
   });
 
 
